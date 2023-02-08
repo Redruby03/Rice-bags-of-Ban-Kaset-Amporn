@@ -45,12 +45,12 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
   const history = useHistory();
 
   const initFormikValues = {
-    fullname: shipping.fullname || profile.fullname || '',
-    email: shipping.email || profile.email || '',
-    address: shipping.address || profile.address || '',
-    mobile: shipping.mobile || profile.mobile || {},
-    isInternational: shipping.isInternational || false,
-    isDone: shipping.isDone || false
+    fullname: shipping.fullname || profile.fullname || ''||null,
+    email: shipping.email || profile.email || ''||null,
+    address: shipping.address || profile.address || ''||null,
+    mobile: shipping.mobile || profile.mobile || {}||null,
+    isInternational: shipping.isInternational || false||null,
+    isDone: shipping.isDone || false||null
   };
 
   const onSubmitForm = (form) => {
@@ -66,51 +66,51 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
   };
 
   return (
-    <div>1</div>
-    // <Boundary>
-    //   <div className="checkout">
-    //     <StepTracker current={2} />
-    //     <div className="checkout-step-2">
-    //       <h3 className="text-center">Shipping Details</h3>
-    //       <Formik
-    //         initialValues={initFormikValues}
-    //         validateOnChange
-    //         // validationSchema={FormSchema}
-    //         onSubmit={onSubmitForm}
-    //       >
-    //         {() => (
-    //           <Form>
-    //             <ShippingForm />
-    //             <br />
-    //             {/*  ---- TOTAL --------- */}
-    //             <ShippingTotal subtotal={subtotal} />
-    //             <br />
-    //             {/*  ----- NEXT/PREV BUTTONS --------- */}
-    //             <div className="checkout-shipping-action">
-    //               <button
-    //                 className="button button-muted"
-    //                 onClick={() => history.push(CHECKOUT_STEP_1)}
-    //                 type="button"
-    //               >
-    //                 <ArrowLeftOutlined />
-    //                 &nbsp;
-    //                 Go Back
-    //               </button>
-    //               <button
-    //                 className="button button-icon"
-    //                 type="submit"
-    //               >
-    //                 Next Step
-    //                 &nbsp;
-    //                 <ArrowRightOutlined />
-    //               </button>
-    //             </div>
-    //           </Form>
-    //         )}
-    //       </Formik>
-    //     </div>
-    //   </div>
-    // </Boundary>
+    // <div>1</div>
+    <Boundary>
+      <div className="checkout">
+        <StepTracker current={2} />
+        <div className="checkout-step-2">
+          <h3 className="text-center">Shipping Details</h3>
+          <Formik
+            initialValues={initFormikValues}
+            validateOnChange
+            validationSchema={FormSchema}
+            onSubmit={onSubmitForm}
+          >
+            {() => (
+              <Form>
+                <ShippingForm />
+                <br />
+                {/*  ---- TOTAL --------- */}
+                <ShippingTotal subtotal={subtotal} />
+                <br />
+                {/*  ----- NEXT/PREV BUTTONS --------- */}
+                <div className="checkout-shipping-action">
+                  <button
+                    className="button button-muted"
+                    onClick={() => history.push(CHECKOUT_STEP_1)}
+                    type="button"
+                  >
+                    <ArrowLeftOutlined />
+                    &nbsp;
+                    Go Back
+                  </button>
+                  <button
+                    className="button button-icon"
+                    type="submit"
+                  >
+                    Next Step
+                    &nbsp;
+                    <ArrowRightOutlined />
+                  </button>
+                </div>
+              </Form>
+            )}
+          </Formik>
+        </div>
+      </div>
+    </Boundary>
   );
 };
 
