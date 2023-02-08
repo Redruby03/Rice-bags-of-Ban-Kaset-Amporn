@@ -74,7 +74,6 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
           <Formik
             initialValues={initFormikValues}
             validateOnChange
-            validationSchema={FormSchema}
             onSubmit={onSubmitForm}
           >
             {() => (
