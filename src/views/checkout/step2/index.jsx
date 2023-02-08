@@ -116,15 +116,15 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
 ShippingDetails.propTypes = {
   subtotal: PropType.number.isRequired,
   profile: PropType.shape({
-    fullname: PropType.string,
-    email: PropType.string,
-    address: PropType.string,
+    fullname: PropType.string||null,
+    email: PropType.string||null,
+    address: PropType.string||null,
     mobile: PropType.object
   }).isRequired,
   shipping: PropType.shape({
-    fullname: PropType.string,
-    email: PropType.string,
-    address: PropType.string,
+    fullname: PropType.string||null,
+    email: PropType.string||null,
+    address: PropType.string||null,
     mobile: PropType.object,
     isInternational: PropType.bool,
     isDone: PropType.bool
