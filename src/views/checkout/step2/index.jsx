@@ -16,27 +16,27 @@ import withCheckout from '../hoc/withCheckout';
 import ShippingForm from './ShippingForm';
 import ShippingTotal from './ShippingTotal';
 
-const FormSchema = Yup.object().shape({
-  fullname: Yup.string()
-    .required('Full name is required.')
-    .min(2, 'Full name must be at least 2 characters long.')
-    .max(60, 'Full name must only be less than 60 characters.'),
-  email: Yup.string()
-    .email('Email is not valid.')
-    .required('Email is required.'),
-  address: Yup.string()
-    .required('Shipping address is required.'),
-  mobile: Yup.object()
-    .shape({
-      country: Yup.string(),
-      countryCode: Yup.string(),
-      dialCode: Yup.string().required('Mobile number is required'),
-      value: Yup.string().required('Mobile number is required')
-    })
-    .required('Mobile number is required.'),
-  isInternational: Yup.boolean(),
-  isDone: Yup.boolean()
-});
+// const FormSchema = Yup.object().shape({
+//   fullname: Yup.string()
+//     .required('Full name is required.')
+//     .min(2, 'Full name must be at least 2 characters long.')
+//     .max(60, 'Full name must only be less than 60 characters.'),
+//   email: Yup.string()
+//     .email('Email is not valid.')
+//     .required('Email is required.'),
+//   address: Yup.string()
+//     .required('Shipping address is required.'),
+//   mobile: Yup.object()
+//     .shape({
+//       country: Yup.string(),
+//       countryCode: Yup.string(),
+//       dialCode: Yup.string().required('Mobile number is required'),
+//       value: Yup.string().required('Mobile number is required')
+//     })
+//     .required('Mobile number is required.'),
+//   isInternational: Yup.boolean(),
+//   isDone: Yup.boolean()
+// });
 
 const ShippingDetails = ({ profile, shipping, subtotal }) => {
   useDocumentTitle('Check Out Step 2 | Rice Bag');
@@ -74,6 +74,7 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
           <Formik
             initialValues={initFormikValues}
             validateOnChange
+            // validationSchema={FormSchema}
             onSubmit={onSubmitForm}
           >
             {() => (
