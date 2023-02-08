@@ -5,13 +5,13 @@ import { FEATURED_PRODUCTS, RECOMMENDED_PRODUCTS, SHOP } from '@/constants/route
 import {
   useDocumentTitle, useFeaturedProducts, useRecommendedProducts, useScrollTop
 } from '@/hooks';
-import bannerImg from '@/images/banner-girl.png';
+import bannerImg from '@/images/farmer-removebg-preview.png';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 
 const Home = () => {
-  useDocumentTitle('Salinaka | Home');
+  useDocumentTitle('Rice Bag | Home');
   useScrollTop();
 
   const {
@@ -33,13 +33,13 @@ const Home = () => {
         <div className="banner">
           <div className="banner-desc">
             <h1 className="text-thin">
-              <strong>See</strong>
-              &nbsp;everything with&nbsp;
-              <strong>Clarity</strong>
+              <strong>Choose</strong>
+              &nbsp;to eat a&nbsp;
+              <strong>Little</strong>
             </h1>
             <p>
-              Buying eyewear should leave you happy and good-looking, with money in your pocket.
-              Glasses, sunglasses, and contacts—we’ve got your eyes covered.
+              <strong>Eating rice</strong> must be germinated Hang rice. for your own <strong>good health</strong>
+              <p>กินข้าวต้องข้าวฮางงอก. เพื่อสุขภาพที่ดี</p>
             </p>
             <br />
             <Link to={SHOP} className="button">

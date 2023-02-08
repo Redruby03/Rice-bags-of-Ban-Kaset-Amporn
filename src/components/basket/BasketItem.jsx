@@ -42,16 +42,6 @@ const BasketItem = ({ product }) => {
                 mm
               </h5>
             </div>
-            <div>
-              <span className="spec-title">Color</span>
-              <div style={{
-                backgroundColor: product.selectedColor || product.availableColors[0],
-                width: '15px',
-                height: '15px',
-                borderRadius: '50%'
-              }}
-              />
-            </div>
           </div>
         </div>
         <div className="basket-item-price">
@@ -73,7 +63,6 @@ BasketItem.propTypes = {
   product: PropType.shape({
     id: PropType.string,
     name: PropType.string,
-    brand: PropType.string,
     price: PropType.number,
     quantity: PropType.number,
     maxQuantity: PropType.number,

@@ -30,7 +30,7 @@ const FormSchema = Yup.object().shape({
 });
 
 const Payment = ({ shipping, payment, subtotal }) => {
-  useDocumentTitle('Check Out Final Step | Salinaka');
+  useDocumentTitle('Check Out Final Step | Rice Bag');
   useScrollTop();
 
   const initFormikValues = {
@@ -42,7 +42,7 @@ const Payment = ({ shipping, payment, subtotal }) => {
   };
 
   const onConfirm = () => {
-    displayActionMessage('Feature not ready yet :)', 'info');
+    displayActionMessage('ยังไม่ได้ทำครับ', 'info');
   };
 
   if (!shipping || !shipping.isDone) {
@@ -57,7 +57,7 @@ const Payment = ({ shipping, payment, subtotal }) => {
         validationSchema={FormSchema}
         validate={(form) => {
           if (form.type === 'paypal') {
-            displayActionMessage('Feature not ready yet :)', 'info');
+            displayActionMessage('ยังไม่ได้ทำครับ', 'info');
           }
         }}
         onSubmit={onConfirm}

@@ -142,16 +142,16 @@
   text-overflow: ellipsis; 
 }
 
-.product-card-brand {
-  margin-top: 0;
-  font-size: $font-small;
-  color: $gray-20;
-  font-style: italic;
+// .product-card-brand {
+//   margin-top: 0;
+//   font-size: $font-small;
+//   color: $gray-20;
+//   font-style: italic;
 
-  @include mobile {
-    margin-bottom: 0;
-  }
-}
+//   @include mobile {
+//     margin-bottom: 0;
+//   }
+// }
 
 .product-card-button {
   // text-transform: uppercase;

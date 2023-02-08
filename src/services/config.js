@@ -1,11 +1,12 @@
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  databaseURL: import.meta.env.VITE_FIREBASE_DB_URL,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MSG_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID
+  apiKey: "AIzaSyDsnwlmrvn5HF1azhIQQTXFzku4qYR0mco",
+  authDomain: "e-commerce-a18e9.firebaseapp.com",
+  databaseURL: "https://e-commerce-a18e9-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "e-commerce-a18e9",
+  storageBucket: "e-commerce-a18e9.appspot.com",
+  messagingSenderId: "468640098725",
+  appId: "1:468640098725:web:f9c6ea613e2c009945204c",
+  measurementId: "G-52WMFBHVXY"
 };
 
 export default firebaseConfig;
